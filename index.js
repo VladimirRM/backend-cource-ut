@@ -17,7 +17,7 @@ app.post('/',(req,res)=>{
 
 async function startApp(){
    try{
-    await mongoose.connect(DB_URL)
+    await mongoose.connect(DB_URL,{useUnifiedTopology: true , useNewUrlParser: true})
    }catch (e){
     console.log(e)
    }
